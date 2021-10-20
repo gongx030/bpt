@@ -1,0 +1,19 @@
+Package: bpt
+Title: A R pacakge for generating batch process templates
+Version: 0.1
+Authors@R: 
+	person(
+		given = "Wuming",
+		family = "Gong",
+		role = c("aut", "cre"),
+		email = "gongx030@umn.edu"
+	)
+Description: A R pacakge for generating batch process templates
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+Depends:
+	dplyr,
+	digest
+
