@@ -1,10 +1,10 @@
-# An R package for managing NGS data analysis on UMN MSI. 
+# An R package for generating Slurm scripts
 
 ## Generating Slurm script for running R commands
 * In the R console: generate R and Slurm scripts:
 The Slurm script will request the resource of one CPU, one task, walltime of 1 hour, and run at the `small` queue.  The script will execute at the working dir, and execute under the conda environment `base`. 
 ```
-library(ngsmsi)
+library(bpt)
 r_command <- "
 print('hello world')
 "
@@ -25,15 +25,6 @@ The previous commands will generate `my_script.r` and `my_script.sh` under the w
 * In the terminal: submit Slurm script. 
 ```
 sbatch my_script.sh
-```
-
-## Query local SRA database by keyword, download SRA files from NCBI SRA database and dump into fastq files
-```
-library(ngsmsi)
-d <- sra_query('SRR5354462') %>%
-  select(run_alias, run, library_strategy, sample_attribute, experiment_title, experiment_attribute, sample_alias)
-sra_download(d$run)
-sra_dump(d$run)
 ```
 
 ## Common Slurm commands
