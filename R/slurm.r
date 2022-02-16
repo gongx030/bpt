@@ -82,10 +82,11 @@ slurm_write_script <- function(
 	pmem <- c(
 		'small' = 2500,
 		'ram256g' = 10000,
-		'amdlarge' = 1900
+		'amdlarge' = 1900,
+		'amdsmall' = 1900
 	) # in Mb
 
-	if (partition %in% c('small', 'ram256g', 'amdlarge')){
+	if (partition %in% c('small', 'ram256g', 'amdlarge', 'amdsmall')){
 
 		mem <- sprintf('%.0f', pmem[partition] * tasks / 1000)
 
