@@ -1,6 +1,6 @@
 Package: bpt
 Title: A R pacakge for generating batch process templates on UMN's MSI
-Version: 0.1.0002
+Version: 0.1.004
 Authors@R: 
 	person(
 		given = "Wuming",
